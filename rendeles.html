@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regisztráció - Manó és Mandala Webshop</title>
+    <style>
+        body {
+            font-family: 'Kings', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 1em;
+        }
+
+        main {
+            padding: 1em;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            padding: 0.5em;
+            border-radius: 0.5em;
+            border: 1px solid #333;
+        }
+        .info {
+            height: 20rem;
+        }
+
+        button {
+            padding: 0.5em;
+            border-radius: 0.5em;
+            border: 1px solid #333;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Egyéni megrendelés</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="kapcsolat.html">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="registration">
+            <form>
+                <label for="name">Név:</label>
+                <input type="text" id="name" name="name" required placeholder="Vezetéknév Keresztnév">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="valaki@valami.com">
+
+                <label for="password">Mobil szám:</label>
+                <input type="number" id="password" name="password" placeholder="06-20-123-4567" required>
+
+                <label for="info">Leírás:</label>
+                <input class="info" type="textbox" id="info" name="info" required placeholder="Milyen terméket szeretne? Milyen méretben? Milyen színben?">
+
+                <button type="submit">Rendelés</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Manó és Mandala Webshop</p>
+    </footer>
+</body>
+</html>
