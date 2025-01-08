@@ -10,18 +10,17 @@
             font-family: 'Kings', sans-serif;
             margin: 0;
             padding: 0;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
         }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
+        
+        nav {
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-height: 100px;
         }
-
-        nav ul li {
-            display: inline;
-            margin-right: 1em;
-        }
-
         main {
             padding: 1em;
         }
@@ -34,6 +33,7 @@
 
         label {
             font-weight: bold;
+            
         }
 
         input {
@@ -61,15 +61,21 @@
             background-color: #555;
         }
 
-        
+        .prices {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            padding-bottom: 3rem;
+        }
         
         table {
             width: 100%;
             border-collapse: collapse;
+            background-color: #fff;
         }
         h3 {
             text-align: center;
-            padding: 3rem;
+            padding: 3rem 0rem;
         }
 
         table th, td {
@@ -78,6 +84,7 @@
             border-collapse: collapse;
             border: #333 2px solid;
             text-align: center;
+
         }
         .order {
             display: flex;
@@ -104,15 +111,16 @@
 </head>
 <body>
     <header>
-        <h1>Egyéni megrendelés</h1>
+        
         <nav>
+            <h1>Egyéni megrendelés</h1>
             <ul>
                 <li><a href="index.html">Főoldal</a></li>
             </ul>
         </nav>
     </header>
     <main>
-       <div>
+       <div class="prices">
         <h3>Áraink:</h3>
         <table>
             <tr>
@@ -123,17 +131,17 @@
             <tr>
                 <td>Manó</td>
                 <td>15000 Ft</td>
-                <td>Kézzel készített manó figura.</td>
+                <td>15 munkanap </td>
             </tr>
             <tr>
                 <td>Mandala</td>
                 <td>9000 Ft</td>
-                <td>Kézzel készített mandala</td>
+                <td>7 munkanap</td>
             </tr>
             <tr>
                 <td>Naptár</td>
                 <td>14500 Ft</td>
-                <td>Kézzel készített naptár</td>
+                <td>7 munkanap</td>
                 
         </table>
        </div>
@@ -141,16 +149,16 @@
         <section id="registration">
             <form>
                 <label for="name">Név:</label>
-                <input type="text" id="name" name="name"  placeholder="Vezetéknév Keresztnév">
+                <input type="text" id="name" name="name"  placeholder="Vezetéknév Keresztnév" required>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email"  placeholder="valaki@valami.com">
+                <input type="email" id="email" name="email"  placeholder="valaki@valami.com" required>
 
                 <label for="password">Mobil szám:</label>
-                <input type="number" id="password" name="password" placeholder="06-20-123-4567" >
+                <input type="number" id="password" name="password" placeholder="06-20-123-4567" required>
                
                     <label for="leiras">Leírás:</label>
-                    <textarea placeholder="Kérlek röviden írd le milyen terméket szertnél" name="leiras" id="leiras" maxlength="1000" cols="25" rows="6"></textarea>
+                    <textarea placeholder="Kérlek röviden írd le milyen terméket szertnél" name="leiras" id="leiras" maxlength="1000" cols="25" rows="6" required></textarea>
                 
                  <button onclick="ordered()" id="order" type="submit">Megrendelés</button>
             </form> 

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     products.forEach(product => {
         const button = document.createElement('button');
         button.textContent = 'Kosárba';
-        button.style.marginTop = '10px';
+        button.style.marginTop = '0.5rem';
         button.addEventListener('click', () => {
             alert('A termék a kosárba került!');
         });
