@@ -4,18 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regisztráció - Manó és Mandala Webshop</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: 'Kings', sans-serif;
-            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
-        }
-
-        header {
-            color: #fff;
-            padding: 1em;
-            text-align: center;
         }
 
         nav ul {
@@ -47,12 +41,9 @@
             border-radius: 0.5em;
             border: 1px solid #333;
         }
-        .info {
-            height: 20rem;
-        }
-
+        
         button {
-            padding: 0.5em;
+            padding: 0.8em;
             border-radius: 0.5em;
             border: 1px solid #333;
             background-color: #333;
@@ -60,18 +51,56 @@
             cursor: pointer;
         }
 
+        #leiras {
+            height: 10rem;
+            border-radius: 0.5em;
+            border: 1px solid #333;
+        }
+
         button:hover {
             background-color: #555;
         }
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em;
+        
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
-    </style>
-    <link rel="stylesheet" href="style.css">
+        h3 {
+            text-align: center;
+            padding: 3rem;
+        }
+
+        table th, td {
+            padding: 1em;
+            position: relative;
+            border-collapse: collapse;
+            border: #333 2px solid;
+            text-align: center;
+        }
+        .order {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+        .order input {
+            padding: 0.5em;
+            border-radius: 0.5em;
+            border: 1px solid #333;
+        }
+
+        @media screen and (max-width: 768px) {
+            nav ul {
+                display: flex;
+
+            };
+            
+        }
+
+
+</style>
+    
 </head>
 <body>
     <header>
@@ -79,31 +108,63 @@
         <nav>
             <ul>
                 <li><a href="index.html">Főoldal</a></li>
-                <li><a href="kapcsolat.html">Kapcsolat</a></li>
             </ul>
         </nav>
     </header>
     <main>
+       <div>
+        <h3>Áraink:</h3>
+        <table>
+            <tr>
+                <th>Termék</th>
+                <th>Ár</th>
+                <th>Szállítás</th>
+            </tr>
+            <tr>
+                <td>Manó</td>
+                <td>15000 Ft</td>
+                <td>Kézzel készített manó figura.</td>
+            </tr>
+            <tr>
+                <td>Mandala</td>
+                <td>9000 Ft</td>
+                <td>Kézzel készített mandala</td>
+            </tr>
+            <tr>
+                <td>Naptár</td>
+                <td>14500 Ft</td>
+                <td>Kézzel készített naptár</td>
+                
+        </table>
+       </div>
+
         <section id="registration">
             <form>
                 <label for="name">Név:</label>
-                <input type="text" id="name" name="name" required placeholder="Vezetéknév Keresztnév">
+                <input type="text" id="name" name="name"  placeholder="Vezetéknév Keresztnév">
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required placeholder="valaki@valami.com">
+                <input type="email" id="email" name="email"  placeholder="valaki@valami.com">
 
                 <label for="password">Mobil szám:</label>
-                <input type="number" id="password" name="password" placeholder="06-20-123-4567" required>
-
-                <label for="info">Leírás:</label>
-                <input class="info" type="textbox" id="info" name="info" required placeholder="Milyen terméket szeretne? Milyen méretben? Milyen színben?">
-
-                <button type="submit">Rendelés</button>
-            </form>
+                <input type="number" id="password" name="password" placeholder="06-20-123-4567" >
+               
+                    <label for="leiras">Leírás:</label>
+                    <textarea placeholder="Kérlek röviden írd le milyen terméket szertnél" name="leiras" id="leiras" maxlength="1000" cols="25" rows="6"></textarea>
+                
+                 <button onclick="ordered()" id="order" type="submit">Megrendelés</button>
+            </form> 
         </section>
+        
     </main>
     <footer>
         <p>&copy; 2024 Manó és Mandala Webshop</p>
     </footer>
+    <script>
+        function ordered() {
+            alert("Köszönjük a megrendelést! Hamarosan felvesszük veled a kapcsolatot.");
+        }
+    </script>
+ 
 </body>
 </html>

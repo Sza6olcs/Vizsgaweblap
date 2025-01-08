@@ -1,10 +1,11 @@
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-          
-
-    }
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}    
 body {
     font-family: Kings, sans-serif;
     margin: 0;
@@ -15,8 +16,10 @@ body {
 header {  
     text-align: center;
     max-height: fit-content;
+    position: relative;
     
     }
+    
 .logo {
     display: flex;
     justify-content: center;
@@ -70,7 +73,6 @@ nav ul li:hover {
     text-align: center;
     align-content: center;
     background-color: white;
-    box-shadow: 0 2px 4px rgba(173, 19, 19, 0.6);
     transition: transform 0.3s ease;
 }
 
@@ -79,7 +81,7 @@ nav ul li:hover {
 }
 
 .product img {
-    max-width: 100%;
+    width: 100%;
     height: 100%;
     border-radius: 5px;
     margin-bottom: 1rem;
@@ -144,8 +146,7 @@ h2  {
     margin-top: 20px;
     position: relative;
     bottom: auto;
-    font-family:Playwrite IE Guides
-      ;
+    font-family:Playwrite IE Guides, sans-serif;
    
 
 }
@@ -166,13 +167,7 @@ footer {
     width: 100%;
 }
 /* base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-}
+
 
 a {
     color: white;
@@ -193,11 +188,11 @@ body {
 
 /* off-screen-menu */
 .off-screen-menu {
-    background-color:  rgb(34, 37, 49);
+    background-color:  rgb(179, 182, 196);
     height: 100vh;
-    width: 100%;
+    width: 100vh;
     max-width: 450px;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: -450px;
     display: flex;
@@ -207,6 +202,8 @@ body {
     text-align: center;
     font-size: 3rem;
     transition: .3s ease;
+    opacity: .8;
+    
 }
 .off-screen-menu.active {
     right: 0;
@@ -223,12 +220,16 @@ nav {
 
 
 
-/* ham menu */
+/* hamburger menu */
 .ham-menu {
     height: 50px;
     width: 40px;
     margin-left: auto;
     position: relative;
+    cursor: pointer;
+    right: 30rem;
+    top: -5rem;
+    
 }
 .ham-menu span {
     height: 5px;
@@ -248,8 +249,12 @@ nav {
 .ham-menu span:nth-child(3) {
     top: 75%;
 }
+.ham-menu.active {
+    right: 2rem;
+}
 .ham-menu.active span {
     background-color: white;
+   
 }
 .ham-menu.active span:nth-child(1) {
     top: 50%;
@@ -263,24 +268,22 @@ nav {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
     
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     .product-grid {
         grid-template-columns: repeat( 1fr);
         gap: 1rem;
     }
-    .ham-menu {
-        display: flex;
-    }
+   
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     .product-grid {
         grid-template-columns: 1fr;
         gap: 1rem;

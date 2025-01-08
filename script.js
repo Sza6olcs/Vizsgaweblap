@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Egyszerű interakció: Termékek kiemelése hover eseményre
+    // Termékek kiemelése hover eseményre
     const products = document.querySelectorAll('.product');
 
     products.forEach(product => {
@@ -23,25 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
         product.appendChild(button);
     });
 });
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburgerMenu = document.getElementById('hamburger-menu');
-    const mobileNav = document.getElementById('mobile-nav');
-
-    hamburgerMenu.addEventListener('click', () => {
-        if (mobileNav.style.display === 'flex') {
-            mobileNav.style.display = 'none';
-        } else {
-            mobileNav.style.display = 'flex';
-        }
-    });
-});
+;
 document.addEventListener('DOMContentLoaded', () => {
     const hamburgerMenu = document.getElementById('hamburger-menu');
     const mainNav = document.getElementById('main-nav');
 
-    hamburgerMenu.addEventListener('click', () => {
-        mainNav.classList.toggle('active');
-    });
+   
 
     // Kosárba gomb funkció
     const addToCartButtons = document.querySelectorAll('.product button');
@@ -51,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+   // Hamburger menü
 const hamMenu = document.querySelector(".ham-menu");
 
 const offScreenMenu = document.querySelector(".off-screen-menu");
@@ -59,3 +47,4 @@ hamMenu.addEventListener("click", () => {
   hamMenu.classList.toggle("active");
   offScreenMenu.classList.toggle("active");
 });
+
