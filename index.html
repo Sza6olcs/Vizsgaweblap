@@ -13,31 +13,33 @@
 <body>
     <header>
         <div class="logo"><img src="Logo.svg" alt=""></div>
+        <nav>
+        <ul>
+            <li><a href="#manok">Manók</a></li>
+            <li><a href="#mandalak">Mandalák</a></li>
+            <li><a href="#velemeny">Rólunk mondták</a></li>
+            <li><a href="kapcsolat.html">Kapcsolat</a></li>
+            <li><a href="rendeles.html">Rendelés</a></li>
+        </ul>
+        </nav>
+
         <div class="off-screen-menu">
             <div class="ham-menu">
                 <span></span>
                 <span></span>
                 <span></span>
-              </div>
-                <ul>
+            </div>
+            <ul>
                     <li><a href="#manok">Manók</a></li>
                     <li><a href="#mandalak">Mandalák</a></li>
                     <li><a href="#velemeny">Rólunk mondták</a></li>
                     <li><a href="kapcsolat.html">Kapcsolat</a></li>
                     <li><a href="rendeles.html">Rendelés</a></li>
-                </ul>
-          </div>
-      
-          <nav>
-            <ul>
-                <li><a href="#manok">Manók</a></li>
-                <li><a href="#mandalak">Mandalák</a></li>
-                <li><a href="#velemeny">Rólunk mondták</a></li>
-                <li><a href="kapcsolat.html">Kapcsolat</a></li>
-                <li><a href="rendeles.html">Rendelés</a></li>
-            </ul>
-            
-          </nav>
+            </ul> 
+            <div class="overlay"></div>
+        </div>
+        
+        
         
     </header>
     <main>
@@ -119,9 +121,11 @@
     <footer style="display: flex;">
         <p>&copy; 2024 Hajnal ajándéktárgyak</p>
     </footer>
-    <button>
-        <a href="#nav">Vissza az oldal tetejére</a>
-    </button>
+    <button onclick="topFunction()" id="totop" title="Go to top"><img src="arrowup.svg" alt=""></button>
+
+
+  </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
