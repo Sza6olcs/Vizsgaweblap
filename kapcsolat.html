@@ -8,55 +8,87 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kings&family=Playwrite+IE+Guides&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
     <style>
-   
-        #contact {
-            text-align: center;
-            font-family: 'Playwrite IE Guides', sans-serif;
-        }
-        #contact h2 {
-            font-size: 5em;
-        }
-        #contact p {
-            font-size: 2em;
-        }
         body {
-            background-color: #f5f5f5;
+            font-family: 'open sans', sans-serif;
+            margin: 0;
+            padding: 0;
             display: grid;
-            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-rows: auto 1fr auto;
         }
-        header {
-            font-family: Amatic SC;
-            color: white;
-            padding: 10px;
+        nav {
+            padding: 1em;
+            justify-content: start;
+        }
+        .bemutatkozas {
+            font-family: "Playwrite Australia SA", Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 1.5em;
+            line-height: 1.5;
             text-align: center;
         }
-
-        footer {
+        .bemutatkozas p {
+            margin: 1em;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-block: 1em;
+            font-family: "Playwrite AU SA", serif;
+            font-optical-sizing: clamp(0.5, 1, 1.5);
+            font-weight: 300;
+            
+        }
+        #contact p{
             text-align: center;
-            color: #333;
-            width: 100%;
-            background-color: #f5f5f5;
+            padding: 1em;
+            font-size: 2em;
+            color: beige;
         }
         
+
+        @media screen and (max-width: 768px) {
+            nav ul {
+                display: inline;
+            };}
+        
     </style>
-    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <header>
         <nav>
             <ul>
                 <li><a href="index.html">Főoldal</a></li>
-                <li><a href="rendeles.html">Rendelés</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        
+        <div class="bemutatkozas">
+
+            <h2>Bemutatkozás</h2>
+
+            <p>Mindig is szerettem a természet apró csodáit. Állásom elvesztése után több időm lett az alkotásra, és hamar rájöttem, hogy ez a tevékenység nem csak kikapcsolódást, de mély önismeretet is nyújt számára.</p>
+
+            <p>A mandalákat először csak magamnak rajzoltam, de barátaim unszolására elkezdtem workshopokat tartani, ahol másoknak is megmutattam, hogyan lehet a mindennapi stresszt levezetni ezekkel a meditatív körökkel. Mandaláim gyakran tükrözik az évszakok változását - tavasszal virágmintákat, ősszel pedig lehulló leveleket ábrázolok bennük.</p>
+                
+            <p>A manó díszek készítése egy kirándulás során jutott eszembe, Hollandiában egy kiskertben megannyi kis manó figurát láttam ami mesebelivé varázsolta az udvart.Alkotásaim hamar népszerűek lettek a környéken, sokan rendelnek tőlem egyedi darabokat.</p>
+                
+            <p> Számomra ez a hobbi több mint időtöltés - egy új életszakasz kezdetét jelenti, ahol végre szabadon kifejezhetem kreativitásom és közelebb kerülhetek a természethez. Műhelyem, amit a kertükben alakítottunk ki, igazi varázslatos birodalommá vált, ahol a mandalák és manó díszek között mindig új ötletek születnek.</p>
+        </div>
+
         <section id="contact">
             <h2>Kapcsolati adatok</h2>
             <p>Email: info@manoesmandala.hu</p>
             <p>Telefon: +36 1 234 5678</p>
             <p>Cím: 1234 Budapest, Példa utca 1.</p>
+            <div id="socialmedia">
+            <a href=""><img src="facebook.svg" alt="" id="facebook"></a>
+            <a href=""><img src="whatsapp.svg" alt="" id="whatsapp"></a>
+            <a href=""><img src="viber.svg" alt="" id="viber"></a>
+            <a href=""><img src="instagram.svg" alt="" id="instagram"></a>
+            <a href=""><img src="x.svg" alt="" id="x"></a>
+            </div>
+            
         </section>
     </main>
     <footer >
