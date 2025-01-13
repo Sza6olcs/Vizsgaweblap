@@ -54,6 +54,7 @@ function scrollFunction() {
   }
 }
 
+
 // Bezárja a menüt ha ráklikkelünk valamire
 
 function topFunction() {
@@ -67,9 +68,4 @@ for(let i = 0; i < closesidebar.length; i++){
     offScreenMenu.classList.remove("active");
   });
 }
-
-
-
-
-
-
+;

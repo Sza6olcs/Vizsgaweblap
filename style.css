@@ -10,16 +10,18 @@
 }
     
 body {
-    background-color: #b32f2f;
-    width: 100vw;
+    background-color: #98b7e1;
+    font-family: 'Bad Script', sans-serif;
+    height: 100%;
+    width: 100%;
+    
     
 }
 
 header {  
     text-align: center;
     max-height: fit-content;
-    position: relative;
-    background-color: #b32f2f;
+    
     color: #fff;
     
 }
@@ -31,7 +33,7 @@ main   {
 }
     
 .logo img {
-    width: 100%;
+    max-width: 100%;
 }
     
     
@@ -138,7 +140,7 @@ nav ul li:hover {
     background-color: #7fb9c9;
 }
 h2  {
-    font-size: 3rem ;
+    font-size: 2.5rem ;
     text-align: center;
     background-color: beige;
     padding: 2rem
@@ -170,7 +172,7 @@ footer {
     justify-content: center;
     font-size: clamp(1rem, 2vw, 2rem);
     padding: 1rem;
-    margin-top: 1rem;
+    margin-bottom: 1rem;
     background-color: #a8d5e2;
     color: #333;
     width: 100%;
@@ -233,10 +235,9 @@ a:hover {
 
 /* off-screen-menu */
 .off-screen-menu {
-    background-color:  rgb(179, 182, 196);
+    
     height: 100%;
-    width: 100dvh;
-    max-width: 100%;
+    width: 100%;        
     position: fixed;
     top: 0;
     right: -100%;
@@ -245,12 +246,9 @@ a:hover {
     align-items: center;    
     justify-content: center;
     text-align: center;
-    font-size: 3rem;
     transition: .3s ease;
     border: #000000  solid 1px;
-    
-    
-    
+    align-items: flex-start;
     
 }
 .off-screen-menu ul {
@@ -270,7 +268,7 @@ a:hover {
 .off-screen-menu ul li {
     margin: 1rem;
     padding: 1rem;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
     transition: .3s ease;
@@ -278,6 +276,11 @@ a:hover {
 
 .off-screen-menu.active {
     right: 0;
+    background-color:  rgba(73, 73, 73, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    
    
 }
 /* nav */
@@ -295,11 +298,12 @@ nav {
     width: 40px;
     display: flex;
     flex-direction: column;
-    position: fixed;
+    position: absolute;
     cursor: pointer;
     transition: .3s ease;
-    right: 11rem;
-    top: 20rem;
+    right: 22rem;
+    top: 8rem;
+    
     
 
     
@@ -323,9 +327,8 @@ nav {
     top: 75%;
 }
 .ham-menu.active {
-    position: fixed;
-    top: 3rem;
-   
+    right: 0.5rem;
+    top: 8rem; 
 
 }
 .ham-menu.active span {
@@ -342,6 +345,18 @@ nav {
 .ham-menu.active span:nth-child(3) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    display: none;
+    
+    
 }
 
 @media screen and (max-width: 1200px) {
@@ -371,19 +386,20 @@ nav {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
+    .logo img {
+        width: 50%;
+    }
     
-    nav ul {
+    nav {
             display: none;
         }
     
-    nav.active ul {
-            display: flex;
-            flex-direction: column;
-            padding-bottom: 1rem;
-        }
     .ham-menu span {
             display: block;
         }
+    #socialmedia img {
+        width: 30px;
+        height: 30px;
     }
 
-
+}
