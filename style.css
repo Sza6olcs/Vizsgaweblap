@@ -280,19 +280,19 @@ a:hover {
 
 /* hamburger menu */
 .ham-menu {
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     margin-left: auto;
     position: fixed;
     cursor: pointer;
-    top: 5rem;
+    top: 10rem;
     right: 1rem;
     
     
     
 }
 .ham-menu span {
-    height: 5px;
+    height: 3px;
     width: 100%;
     background-color: #000000;
     border-radius: 25px;
@@ -356,6 +356,12 @@ a:hover {
 
 @media (max-width: 576px) {
     
+    header {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     .ham-menu span{
         display: block;
     }
@@ -367,7 +373,8 @@ a:hover {
         gap: 1rem;
     }
     .logo img {
-        width: 30%; }    
+        height: max-content; 
+}    
    
     #socialmedia img {
         width: 30px;
