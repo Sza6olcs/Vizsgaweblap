@@ -31,9 +31,22 @@ main   {
     z-index: 100;
     width: 100%;
 }
+.logo {
+    max-height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+    
+}
     
 .logo img {
-    max-width: 100%;
+    width: auto;
+    height: 50%;
+    aspect-ratio: 16/9;
+    object-fit: stretch;
 }
     
     
