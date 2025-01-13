@@ -10,9 +10,8 @@
 }
     
 body {
-    margin: 0;
-    padding: 0;
     background-color: #b32f2f;
+    width: 100vw;
     
 }
 
@@ -28,16 +27,17 @@ header {
     
 main   {
     z-index: 100;
+    width: 100%;
 }
     
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    max-height: 18rem;  
-    
+.logo img {
+    width: 100%;
 }
+    
+    
+    
+    
+    
 nav {
     display: flex;
     justify-content: center;
@@ -146,23 +146,6 @@ h2  {
 }
 
 
-.hamburger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    position: relative;
-    
-}
-
-.hamburger-menu span {
-    background: #333;
-    height: 4px;
-    width: 2rem;
-    margin: 4px 0;
-    position: relative;
-    
-}
-
 .velemenyek {
     display: flex;
     flex-direction: column;
@@ -195,8 +178,9 @@ footer {
 #socialmedia {
     display: flex;
     justify-content: center;
-    gap: 2em;
+    max-width: 100%;
     margin-top: 1rem;
+    padding: 1rem;
 }
 #socialmedia img{
     width: 50px;
@@ -244,10 +228,6 @@ a:hover {
     color: #6F86FF;
 }
 
-body {
-    background-color: rgb(65, 71, 97);
-    font-family: sans-serif;
-}
 
 
 
@@ -267,6 +247,7 @@ body {
     text-align: center;
     font-size: 3rem;
     transition: .3s ease;
+    border: #000000  solid 1px;
     
     
     
@@ -280,9 +261,6 @@ body {
     padding: 0;
     margin: 0;
     text-align: center;
-    font-family: 'Jersey 15', cursive;
-    font-size: 3rem;
-    font-weight: bold;
     cursor: pointer;
     transition: .3s ease;
     
@@ -315,11 +293,13 @@ nav {
 .ham-menu {
     height: 50px;
     width: 40px;
-    margin-left: auto;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
     cursor: pointer;
-    left: -102%;
-    top: -13rem;
+    transition: .3s ease;
+    right: 11rem;
+    top: 20rem;
     
 
     
@@ -343,8 +323,9 @@ nav {
     top: 75%;
 }
 .ham-menu.active {
-    left: -2%;
-    position: relative;
+    position: fixed;
+    top: 3rem;
+   
 
 }
 .ham-menu.active span {
