@@ -42,7 +42,7 @@ hamMenu.addEventListener("click", () => {
   offScreenMenu.classList.toggle("active");
 });
 
-// Lap tetejére gomb
+// Lap tetejére gomb megjelenítése
 let hamMenuButton = document.querySelector(".ham-menu");
 let mybutton = document.getElementById("totop");
 window.onscroll = function() {scrollFunction()};
@@ -59,12 +59,14 @@ function scrollFunction() {
 }
 
 
-// Bezárja a menüt ha ráklikkelünk valamire
+// Lap tetejére gomb működése
 
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// Bezárja a menüt ha ráklikkelünk valamire
 let closesidebar = document.getElementsByTagName("a");
 for(let i = 0; i < closesidebar.length; i++){
   closesidebar[i].addEventListener("click", () => {

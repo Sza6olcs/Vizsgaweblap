@@ -355,6 +355,7 @@ a:hover {
     }
 
 @media (max-width: 576px) {
+    
     .ham-menu span{
         display: block;
     }
@@ -374,3 +375,4 @@ a:hover {
     }
 
 }
+

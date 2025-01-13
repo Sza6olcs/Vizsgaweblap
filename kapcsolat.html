@@ -5,18 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kapcsolat - Manó és Mandala Webshop</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kings&family=Playwrite+IE+Guides&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: 'open sans', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #90a4b8;
-        }
-        
         nav {
             padding: 1em;
             justify-content: start;
@@ -61,7 +51,7 @@
         
         <nav>
             <ul>
-                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="index.html">Vissza a főoldalra</a></li>
             </ul>
         </nav>
     </header>
@@ -77,7 +67,7 @@
                 
             <p>A manó díszek készítése egy kirándulás során jutott eszembe, Hollandiában egy kiskertben megannyi kis manó figurát láttam ami mesebelivé varázsolta az udvart.Alkotásaim hamar népszerűek lettek a környéken, sokan rendelnek tőlem egyedi darabokat.</p>
                 
-            <p> Számomra ez a hobbi több mint időtöltés - egy új életszakasz kezdetét jelenti, ahol végre szabadon kifejezhetem kreativitásom és közelebb kerülhetek a természethez. Műhelyem, amit a kertükben alakítottunk ki, igazi varázslatos birodalommá vált, ahol a mandalák és manó díszek között mindig új ötletek születnek.</p>
+            <p> Számomra ez a hobbi több mint időtöltés - egy új életszakasz kezdetét jelenti, ahol végre szabadon kifejezhetem kreativitásom és közelebb kerülhetek a természethez. Műhelyem, amit a kertünkben alakítottunk ki, igazi varázslatos birodalommá vált, ahol a mandalák és manó díszek között mindig új ötletek születnek.</p>
         </div>
 
         <section id="contact">
@@ -96,8 +86,29 @@
             
         </section>
     </main>
+    
     <footer >
         <p>&copy; 2024 Manó és Mandala Webshop</p>
     </footer>
+
+    <button onclick="topFunction()" id="totop" title="Go to top"><img src="arrowup.svg" alt=""></button>
+
+    <script >
+        
+let mybutton = document.getElementById("totop");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+    </script>
 </body>
 </html>

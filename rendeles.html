@@ -11,7 +11,8 @@
             text-align: center;
             display: block;
             font-size: 2.5rem;
-            padding-top: 1rem;
+            padding-top: 2rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             
         }   
 
@@ -73,7 +74,7 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            background-color: #fff;
+            border-radius: 10px;
         }
         h3 {
             font-size: 2rem;
@@ -84,10 +85,17 @@
         table th, td {
             padding: 1em;
             position: relative;
-            border-collapse: collapse;
-            border: #333 2px solid;
             text-align: center;
-
+        }
+        table th {
+            background-color: #455184;
+            color: #fff;
+            border-radius: 12px 12px 0 0;
+            
+        }
+        table td {
+            background-color: #f2f2f2;
+            border-bottom: 1px solid #333;
         }
         .order {
             display: flex;
@@ -107,10 +115,11 @@
 </head>
 <body>
     <header>
-        <h1>Egyéni megrendelés</h1>
+        <div class="logo"><img src="Logo.svg" alt=""></div>
+        <h2>Egyéni megrendelés</h2>
         <nav>
             <ul>
-                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="index.html">Vissza a főoldalra</a></li>
             </ul>
         </nav>
     </header>
