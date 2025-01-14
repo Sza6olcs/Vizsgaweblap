@@ -67,7 +67,7 @@ function topFunction() {
 }
 
 // Bezárja a menüt ha ráklikkelünk valamire
-let closesidebar = document.getElementsByTagName("a");
+let closesidebar = document.getElementsByClassName("anch");
 for(let i = 0; i < closesidebar.length; i++){
   closesidebar[i].addEventListener("click", () => {
     hamMenu.classList.toggle("active");
