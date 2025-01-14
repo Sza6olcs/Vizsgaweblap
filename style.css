@@ -45,7 +45,7 @@ main   {
     justify-self: flex-start;
     max-width: 15rem;
     max-height: 15rem;
-    margin-inline-start: 6rem;
+    margin-left: 6rem;
 }
 nav {
     display: flex;
@@ -150,7 +150,7 @@ h2  {
     padding: 2rem;
     margin-block: .5rem;
     background-color: #a8d5e2;
-    box-shadow: #2674a4 0 0 30px;
+    box-shadow: #2674a4 0 5px 100px;
     
 }
 
@@ -287,8 +287,8 @@ a:hover {
     margin-left: auto;
     position: fixed;
     cursor: pointer;
-    top: 5rem;
-    right: 1rem;
+    top: 13rem;
+    right: 11rem;
     
     
     
@@ -314,6 +314,9 @@ a:hover {
 .ham-menu.active {
     right: 2rem;
     top: 7rem; 
+    > p {
+        display: none;
+    }
 
 }
 .ham-menu.active span {
