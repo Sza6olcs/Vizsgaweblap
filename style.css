@@ -113,6 +113,7 @@ nav ul li:hover {
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 1rem;
+    display: block;
     
 
 }
@@ -181,27 +182,65 @@ footer {
     background-color: #aaebfd;
     width: 100%;
 }
-#socialmedia {
+.socialmedia{
     display: flex;
-    justify-content: center;
-    max-width: 100%;
-    margin-top: 1rem;
-    padding: 1rem;
-}
-#socialmedia img{
-    width: 50px;
-    height: 50px;
-}
-#socialmedia img:hover {
-    transform: scale(1.1);
-    transition: 0.3s;
-}
-#socialmedia a {
-    display: flex;
-    justify-content: center;
+    gap: 20px;
     align-items: center;
-    padding-inline: 1rem;
-}
+    justify-content: center;
+    padding: 1rem;
+  }
+  .socialmedia a{
+    background-color: white;
+    padding: 1em;
+    border-radius: 50%;
+    height: 64px;
+    width: 64px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  }
+  .socialmedia a svg{
+    height: 32px;
+  }
+  .socialmedia a::before{
+    content: attr(data-social);
+    position: absolute;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 100px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transform: translateY(-30px) rotate(25deg);
+    opacity: 0;
+    transition: 200ms cubic-bezier(.42,0,.44,1.68);
+  }
+  .socialmedia a:hover{
+    background-color: var(--accent-color);
+    fill: white;
+  }
+  .socialmedia a::after{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid var(--accent-color);
+    transform: translateY(0) rotate(25deg);
+    opacity: 0;
+    transition: 200ms cubic-bezier(.42,0,.44,1.68);
+  }
+  .socialmedia a:hover::before{
+    transform: translateY(-65px) rotate(0);
+    opacity: 1;
+  }
+  .socialmedia a:hover::after{
+    transform: translateY(-42px) rotate(0);
+    opacity: 1;
+  }
 #totop {
     display: none;
     position: fixed;
@@ -288,7 +327,8 @@ a:hover {
     position: fixed;
     cursor: pointer;
     top: 13rem;
-    right: 11rem;
+    right: 2rem;
+    
     
     
     
@@ -314,10 +354,7 @@ a:hover {
 .ham-menu.active {
     right: 2rem;
     top: 7rem; 
-    > p {
-        display: none;
-    }
-
+   
 }
 .ham-menu.active span {
     background-color: white;
@@ -359,13 +396,16 @@ a:hover {
         width: 50%;
     }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     
     header {
-        
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
+        > nav > img {
+            margin-inline-end: 6rem; 
+        }
     }
     .ham-menu span{
         display: block;
