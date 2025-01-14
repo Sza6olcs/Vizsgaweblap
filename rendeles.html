@@ -15,12 +15,6 @@
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             
         }   
-
-        nav {
-            
-            display: flex;
-           
-        }
         main {
             display: flex;
             flex-direction: column;
@@ -40,18 +34,27 @@
         }
 
         input {
-            padding: 0.5em;
+            padding: 1rem;
             border-radius: 0.5em;
             border: 1px solid #333;
         }
         
         button {
-            padding: 0.8em;
-            border-radius: 0.5em;
-            border: 1px solid #333;
-            background-color: #333;
-            color: #fff;
+            position: relative;
+            background-color: #a8d5e2;
+            border: none;
+            max-width: 200rem;
+            align-self: center;
+            padding: 2rem 1rem 4rem;
+            font-size: 2rem;
+            border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.1s ease;
+            height: 1.5rem;
+        }
+
+        button:hover {
+            background-color: #7fb9c9;
         }
 
         #leiras {
@@ -60,9 +63,6 @@
             border: 1px solid #333;
         }
 
-        button:hover {
-            background-color: #555;
-        }
 
         .prices {
             display: flex;
@@ -107,17 +107,41 @@
             border-radius: 0.5em;
             border: 1px solid #333;
         }
-      
+        
+        
+        @media screen and (max-width: 576px) {
+            header {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                > nav > img {
+                    margin-inline-end: 6rem; 
+                }
+            }
 
-
+            .main-nav {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+        }
+            .main-nav ul {
+                display: flex;
+                flex-direction: column;
+                justify-items: center;
+                align-items: center;
+                
+            }
+            
+        }
 </style>
     
 </head>
 <body>
     <header>
-        <div class="logo"><img src="Logo.svg" alt=""></div>
-        
-        <nav>
+        <nav class="main-nav" >
+            <img src="Hajnal.svg" alt="">
             <ul>
                 <li><a href="index.html">Vissza a főoldalra</a></li>
             </ul>

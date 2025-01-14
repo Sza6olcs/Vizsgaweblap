@@ -21,7 +21,7 @@ body {
 header {  
     text-align: center;
     max-height: fit-content;
-    
+    background-color: #98b7e1;
     color: #fff;
     
 }
@@ -31,38 +31,29 @@ main   {
     z-index: 100;
     width: 100%;
 }
-.logo {
-    max-height: 20rem;
+.main-nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    
-    
-    
+    align-items:self-end;
+    justify-content: space-between;
 }
+.main-nav ul {
+    display: flex;
     
-.logo img {
-    width: auto;
-    height: 50%;
-    aspect-ratio: 16/9;
-    object-fit: stretch;
+    justify-self: flex-end;  
 }
-    
-    
-    
-    
-    
+.main-nav img {
+    justify-self: flex-start;
+    max-width: 15rem;
+    max-height: 15rem;
+    margin-inline-start: 6rem;
+}
 nav {
-    padding: 1rem;
     display: flex;
-    font-weight: 700;
+    
 }
 
 nav ul {
     list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
     justify-self: center;
     
 }
@@ -75,8 +66,6 @@ nav ul li {
     font-weight: 600;
     font-stretch: 100%;
     font-size: clamp(1.5rem, 2vw, 2rem);
-    font-weight: 300;
-    
 
 }
 
@@ -114,7 +103,7 @@ nav ul li:hover {
 }
 
 .product:hover {
-    transform: translateY(-5px);
+    transform: translateY(5px);
 }
 
 .product img {
@@ -129,12 +118,12 @@ nav ul li:hover {
 }
 
 .product h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 1rem;
 }
 
 .product p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #666;
     padding-bottom: 3rem;
     max-height: 10px;
@@ -155,7 +144,7 @@ nav ul li:hover {
     background-color: #7fb9c9;
 }
 h2  {
-    font-size: 2.5rem ;
+    font-size: 2rem;
     text-align: center;
     background-color: beige;
     padding: 2rem;
@@ -189,7 +178,7 @@ footer {
     justify-content: center;
     font-size: clamp(1rem, 2vw, 2rem);
     padding: 1rem;
-    background-color: #a8d5e2;
+    background-color: #aaebfd;
     width: 100%;
 }
 #socialmedia {
@@ -291,14 +280,14 @@ a:hover {
 }
 
 
-/* hamburger menu */
+/* hamburger menü */
 .ham-menu {
     height: 30px;
     width: 30px;
     margin-left: auto;
     position: fixed;
     cursor: pointer;
-    top: 10rem;
+    top: 5rem;
     right: 1rem;
     
     
@@ -378,16 +367,18 @@ a:hover {
     .ham-menu span{
         display: block;
     }
-    .main-nav {
+    .main-nav ul {
         display: none;
+
     }
+
     .product-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
     .logo img {
         height: max-content; 
-}    
+    }    
    
     #socialmedia img {
         width: 30px;
